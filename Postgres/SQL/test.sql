@@ -70,3 +70,5 @@ insert into t_party_member values(6,2,6);
 insert into t_party_member values(7,2,1);
 insert into t_party_member values(8,2,5);
 insert into t_party_member values(9,1,7);
+
+-- END
