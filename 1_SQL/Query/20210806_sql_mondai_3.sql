@@ -1,0 +1,3 @@
+select party_id as パーティーID,title as パーティー名,to_char(start_ts, 'YYYY/MM/DD  HH24:MI') as 開催日時 from t_party as tp 
+	where party_id in (select tpm.party_id from t_party_member as tpm where tpm.member_id in (select tm.member_id from t_member as tm where tm.gender_kbn = '00101')
+	 and tpm.party_id not in (select tpm.party_id from t_party_member as tpm where tpm.member_id in (select tm.member_id from t_member as tm where tm.gender_kbn = '00102')));
