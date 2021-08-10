@@ -20,7 +20,7 @@ select * from mondai_1();
 
 
 -- Function with variable
-CREATE or REPLACE function mondai_1(members bigint) RETURNS TABLE (
+CREATE or REPLACE function mondai_1(memberID bigint) RETURNS TABLE (
   会員CD text,
   性別区分 text,
   名前（姓 text,
@@ -34,7 +34,7 @@ CREATE or REPLACE function mondai_1(members bigint) RETURNS TABLE (
         family_kj as 名前（姓,
 		birthday_ts::timestamp::date as 誕生日 
 		from t_member 
-        where t_member.member_id in (members);
+        where t_member.member_id in (memberID);
     END $$ 
 language plpgsql;
 
