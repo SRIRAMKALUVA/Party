@@ -4,7 +4,7 @@ select
     title as パーティー名,
     to_char(start_ts, 'YYYY/MM/DD HH24:MI') as 開催日時,
     to_char(end_ts, 'YYYY/MM/DD HH24:MI') as 終了日時,
-    tpl.name as 場所の名前,tpl.address as 住所, member_cd,
+    tpl.name as 場所の名前,tpl.address as 住所, member_cd as 会員CD,
     concat(family_kj, first_kj) as 姓名, 
     case when gender_kbn = '00101' then '男性' 
         when gender_kbn = '00102' then '女性' else 'Other' 
