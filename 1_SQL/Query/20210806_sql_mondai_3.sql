@@ -7,7 +7,7 @@ FROM t_party AS tp
  INNER JOIN t_member AS tm ON (tpm.member_id = tm.member_id)
  GROUP BY tp.party_id
  HAVING 
- 	SUM(case when tm.gender_kbn = '00102' AND tp.party_id = tpm.party_id THEN 1 ELSE 0 END) = 0
+ 	SUM(case when tm.gender_kbn = '00102'THEN 1 ELSE 0 END) = 0
 ;
 
 
