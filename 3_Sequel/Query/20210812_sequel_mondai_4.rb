@@ -1,5 +1,5 @@
 require 'sequel'
-require 'date'
+
 DB = Sequel.postgres('Party',user:'postgres',password:'root@123',host:'localhost',port:5433,max_connections: 10)
 
 t_member = DB[:t_member]
